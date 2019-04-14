@@ -1,0 +1,35 @@
+{% extends 'book_app/base.html' %}
+{% block body_block %}
+
+<div class="post-bar">
+  <h1 id="blog-detail-title">{{ blog.title }}</h1>
+  {% if user.is_authenticated %}
+<!--     <p class="blog-title-between"></p> -->
+    <a href="{% url 'book_app:post_edit' pk=blog.pk %}"><i class="glyphicon glyphicon-pencil grey"></i></a>
+<!--     <p class="blog-title-between"></p> -->
+    <a href="{% url 'book_app:post_remove' pk=blog.pk %}"><i class=" glyphicon glyphicon-remove grey"></i></a>
+  {% endif %}
+</div>
+
+<hr>
+<p id="blog-detail-posted">Posted: {{ blog.posted }}</p>
+<p id="blog-detail-body">{{ blog.body|safe|linebreaksbr }}</p>
+
+<hr>
+
+<div id="comment-blog-button">
+  <a class="btn btn-outline-secondary" href="{% url 'book_app:add_comment_to_post' pk=blog.pk %}">Add comment</a>
+</div>
+{% for comment in blog.comments.all %}
+  <div class="comment-part">
+    <strong>{{ comment.author }}</strong>
+    {% if user.is_authenticated %}
+      <a href="{% url 'book_app:comment_remove' pk=comment.pk %}"><i id="remove-comment" class=" glyphicon glyphicon-remove grey"></i></a>
+    {% endif %}
+    <p>{{ comment.text|linebreaks }}</p>
+  </div>
+{% empty %}
+  <p>No comments yet</p>
+{% endfor %}
+
+{% endblock %}

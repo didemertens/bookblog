@@ -1,0 +1,38 @@
+{% extends "book_app/base.html" %}
+{% block body_block %}
+<div class="typewriter"><h1>Hi there, book lover!</h1></div>
+
+<!-- <div class="cards">
+  <div class="carousel"> -->
+
+<div class=cards>
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h1>First</h1>
+        <h4>published book</h4>
+      </div>
+      <div class="flip-card-back">
+        <h5>The first published book was the Gutenberg Bible in 1453!</h5>
+      </div>
+    </div>
+  </div>
+  <div id="middle-card">
+   <p></p>
+  </div>
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h1>Longest</h1>
+        <h4>novel ever</h4>
+      </div>
+      <div class="flip-card-back">
+        <h5>The longest novel is Marcel Proust's <em>In Search of Lost Time!</em></h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="linkblog"><a id = "buttonblog" href="{% url 'book_app:blog_list' %}">Read blogs</a></div>
+
+{% endblock %}

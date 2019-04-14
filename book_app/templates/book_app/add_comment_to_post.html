@@ -1,0 +1,11 @@
+{% extends 'book_app/base.html' %}
+{% block body_block %}
+
+  <h1>New comment</h1>
+  <form method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button id="comment-button" type="submit" class="btn btn-outline-secondary">Post Comment</button>
+  </form>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "book_app/base.html" %}
+{% block body_block %}
+
+<h1>Latest Posts</h1>
+
+<div class="container-list">
+  <ol id="blog-list">
+
+{% for blog in blog_list %}
+    <li><a id="blog-title" href="{% url 'book_app:blog_detail' pk=blog.pk %}">{{ blog.title }}</a></li>
+    <a id="blog-intro" href="{% url 'book_app:blog_detail' pk=blog.pk %}">{{ blog.intro }}</a>
+  <hr id="list-line">
+{% endfor %}
+  </ol>
+</div>
+
+
+{% endblock %}

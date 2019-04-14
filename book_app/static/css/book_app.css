@@ -1,0 +1,331 @@
+body {
+  font-family: 'Sree Krushnadevaraya', serif;
+  padding-bottom: 80px;
+  font-size: 16px;
+}
+
+#navbar-item{
+  padding: 15px;
+  font-size: 16px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+#navbar-item:hover{
+  color: #F9CD66;
+}
+
+#navbar-image{
+  margin: 5px 5px 5px 10px;
+  width: 40px;
+  height: 70px;
+  width: 70px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h4, h5{
+  font-size: 19px;
+}
+
+#linkblog {
+  text-align: center;
+  margin: 50px 0px 0px;
+}
+
+#buttonblog {
+  font-family: 'Roboto Mono', monospace;
+  text-decoration: none;
+  color: black;
+  border: 1px solid #9ea2a8;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+#buttonblog:hover{
+  color: #F9CD66;
+  border: 1px solid #F9CD66;
+}
+
+.typewriter h1{
+  overflow: hidden;
+  border-right: .10em solid transparent;
+  white-space: nowrap;
+  margin: 25px auto;
+  letter-spacing: .15em;
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .65s step-end 3;
+}
+
+.container-list{
+  width: 80%;
+  margin: 30px auto 10px;
+  border: 4px solid #f7f8f9;
+}
+
+#blog-list{
+  list-style: decimal-leading-zero;
+  color: #F9CD66;
+  font-size: 35px;
+  margin: 50px;
+  padding: 0px 10%;
+}
+
+#list-line{
+  width: 300px;
+  border-top: 2px solid #F9CD66;
+}
+
+#blog-intro{
+  color: black;
+  font-size: 15px;
+  text-decoration: none;
+  display: inline-block
+}
+
+#blog-title {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  padding: 0px;
+}
+
+#blog-title:hover{
+  color: #F9CD66;
+}
+
+#blog-detail-title{
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.grey{
+  color: #9ea2a8;
+  padding: 20px 5px;
+}
+
+.grey:hover{
+  color: #F9CD66;
+}
+
+.post-bar{
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#blog-detail-posted{
+  margin: 30px 50px;
+  font-size: 14px;
+  font-style: italic;
+}
+
+#blog-detail-body{
+  margin: 30px 50px;
+}
+
+.comment-part{
+  position: relative;
+  margin: 20px auto;
+  padding: 10px;
+  border: 1px #93969b;
+  box-shadow: 2px 2px 3px #9ea2a8;
+  width: 50%;
+}
+
+#comment-blog-button{
+  margin: 10px 42%;
+  width: 200px;
+  text-align: center;
+  padding: 10px;
+}
+
+#remove-comment{
+  position: absolute;
+  top: -10px;
+  right: 10px;
+}
+
+.btn{
+  font-size: 15px;
+  padding: 10px;
+}
+
+.btn:hover{
+  color: #F9CD66;
+  background-color: white;
+  border: 1px solid #F9CD66;
+}
+
+label{
+  display: block;
+  text-align: center;
+}
+
+.post-title{
+  font-family: 'Sree Krushnadevaraya', serif;
+  margin: 10px 41%;
+  width: 200px;
+  border: 3px solid #e1e4ea;
+  border-radius: 2px;
+}
+
+.post-content{
+  font-family: 'Sree Krushnadevaraya', serif;
+  margin: 10px;
+  border: 3px solid #e1e4ea;
+  border-radius: 2px;
+  width: 100%;
+  height: 500px;
+}
+
+.post-intro{
+  font-family: 'Sree Krushnadevaraya', serif;
+  margin: 10px 28%;
+  border: 3px solid #e1e4ea;
+  border-radius: 2px;
+  height: 100px;
+  width: 500px;
+}
+
+.author-comment{
+  font-family: 'Sree Krushnadevaraya', serif;
+  margin: 10px 42.5%;
+  border: 3px solid #e1e4ea;
+  border-radius: 2px;
+}
+
+.text-comment{
+  font-family: 'Sree Krushnadevaraya', serif;
+  margin: 10px 33%;
+  border: 3px solid #e1e4ea;
+  border-radius: 2px;
+  width: 400px;
+}
+
+#post-blog-button{
+  margin: 10px 50%;
+  width: 100px;
+}
+
+#comment-button{
+  margin: 10px 42% 30px;
+  width: 200px;
+  text-align: center;
+  padding: 10px;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 60% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black }
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+  margin: 30px 30px 40px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  box-shadow: 2px 2px 3px #9ea2a8;
+}
+
+.flip-card-front {
+  background-color: white;
+  color: black;
+  padding: 20px;
+}
+
+.flip-card-back {
+  background-color: #F9CD66;
+  color: white;
+  transform: rotateY(180deg);
+  padding: 50px;
+}
+
+.cards{
+  margin: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/*.carousel{
+  width: 300px;
+  box-shadow: 2px 2px 3px #9ea2a8;
+  margin: 80px 0px;
+  padding: 20px;
+  text-align: center;
+}
+
+#carousel_middle{
+  width: 30px;
+}*/
+
+#middle-card{
+  width: 20px;
+}
+
+#border-login{
+  border: 4px solid #f7f8f9;
+  padding: 50px;
+  border-top: hidden;
+}
+
+.login-form{
+  text-align: center;
+}
+
+.footer{
+  position: fixed;
+  bottom: 0;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  background-color: #9da0a5;
+  color: white;
+}
+
+.footer a{
+  color: white;
+  opacity: 0.5;
+  margin: 20px;
+  font-size: 50px;
+}
+
+.footer a:hover{
+  color: white;
+  opacity: 2;
+}
+
+#quote{
+  line-height: 80px;
+}

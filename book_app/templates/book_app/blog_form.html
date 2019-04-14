@@ -1,0 +1,12 @@
+{% extends "book_app/base.html" %}
+{% block body_block %}
+
+<h1>New post</h1>
+<form method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" id="post-blog-button" class="btn btn-outline-secondary">Post</button>
+</form>
+
+
+{% endblock %}
