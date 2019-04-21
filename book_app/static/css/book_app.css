@@ -322,8 +322,6 @@ label{
   width: 100%;
   display: flex;
   background-color: #F8F9FA;
-  color: black;
-  opacity: 0.7;
 }
 
 .footer a{
@@ -340,4 +338,6 @@ label{
 
 #quote{
   line-height: 80px;
+  color: black;
+  opacity: 0.7;
 }
