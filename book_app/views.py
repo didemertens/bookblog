@@ -56,6 +56,7 @@ def comment_remove(request, pk):
     comment.delete()
     return redirect('book_app:blog_detail', pk=blog_pk)
 
+@login_required
 def add_comment_to_post(request, pk):
   blog = get_object_or_404(Blog, pk=pk)
   if request.method == "POST":
