@@ -1,7 +1,7 @@
 from django.views.generic import TemplateView,ListView,DetailView,CreateView,UpdateView, DeleteView
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin,UserPassesTestMixin
 from django.urls import reverse_lazy
 from book_app.models import Blog,Comment
 from .forms import PostForm, CommentForm
@@ -28,9 +28,14 @@ class PostUpdateView(LoginRequiredMixin,UpdateView):
   form_class = PostForm
   model = Blog
 
-class PostDeleteView(LoginRequiredMixin,DeleteView):
+class PostDeleteView(LoginRequiredMixin,UserPassesTestMixin,DeleteView):
   model = Blog
+  login_url = '/login/'
   success_url = reverse_lazy('book_app:blog_list')
+
+  def test_func(self):
+    obj = self.get_object()
+    return obj.author == self.request.user
 
 @login_required
 def comment_remove(request, pk):

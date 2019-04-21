@@ -3,8 +3,7 @@
 
 
 <div id=border-login>
-  <h2 class="login-form">Please Login: </h2>
-  <h3 class="login-form">(Must be SuperUser, please check admin for issues.)</h3>
+  <h2 class="login-form">Please Login </h2>
   {% if form.errors %}
     <p>Your username and password didn't match. Please try again!</p>
   {% endif %}
@@ -16,6 +15,8 @@
     <input type="submit" class='btn btn-secondary' value="Login" />
     <input type="hidden" name="next" value="{{ next }}" />
   </form>
+  <hr>
+  <h3 class="login-form">Or sign up <a href="{% url 'signup' %}">here</a>!</h3>
 </div>
 
 {% endblock %}
