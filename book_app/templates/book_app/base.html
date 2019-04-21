@@ -22,9 +22,11 @@
           <li class="nav-item"><a class="nav-link" id="navbar-item" href="{% url 'book_app:blog_list' %}">Blogs</a></li>
         </ul>
         <ul class="navbar-nav ml-auto">
-          {% if user.is_authenticated %}
+          {% if user.is_superuser %}
             <li><a id="navbar-item" class="nav-item nav-link" href="{% url 'book_app:post_new' %}">New Post</a></li>
             <li class="nav-item"><a class="nav-link" id="navbar-item" href="{% url 'admin:index' %}">Admin</a></li>
+            <li><a id="navbar-item" class="nav-item nav-link" href="{% url 'logout' %}">Log out</a></li>
+          {% elif user.is_authenticated %}
             <li><a id="navbar-item" class="nav-item nav-link" href="{% url 'logout' %}">Log out</a></li>
           {% else %}
             <li><a id="navbar-item" class="nav-item nav-link" href="{% url 'login' %}" aria-label="Login">
