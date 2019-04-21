@@ -7,8 +7,10 @@
   <ol id="blog-list">
 
 {% for blog in blog_list %}
-    <li><a id="blog-title" href="{% url 'book_app:blog_detail' pk=blog.pk %}">{{ blog.title }}</a></li>
-    <a id="blog-intro" href="{% url 'book_app:blog_detail' pk=blog.pk %}">{{ blog.intro }}</a>
+    <div class="blog-single">
+      <li><a id="blog-title" href="{% url 'book_app:blog_detail' pk=blog.pk %}">{{ blog.title }}</a></li>
+      <a id="blog-intro" href="{% url 'book_app:blog_detail' pk=blog.pk %}">{{ blog.intro }}</a>
+    </div>
   <hr id="list-line">
 {% endfor %}
   </ol>

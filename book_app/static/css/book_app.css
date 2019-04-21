@@ -73,6 +73,15 @@ h4, h5{
   padding: 0px 10%;
 }
 
+.blog-single:hover #blog-title{
+  color: #F9CD66;
+}
+
+.blog-single:hover #blog-intro{
+  opacity: 0.7;
+  font-style: italic;
+}
+
 #list-line{
   width: 300px;
   border-top: 2px solid #F9CD66;
@@ -82,7 +91,8 @@ h4, h5{
   color: black;
   font-size: 15px;
   text-decoration: none;
-  display: inline-block
+  display: inline-block;
+  opacity: 1;
 }
 
 #blog-title {
@@ -90,10 +100,6 @@ h4, h5{
   color: black;
   font-size: 20px;
   padding: 0px;
-}
-
-#blog-title:hover{
-  color: #F9CD66;
 }
 
 #blog-detail-title{
