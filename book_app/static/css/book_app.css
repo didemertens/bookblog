@@ -315,6 +315,21 @@ label{
   text-align: center;
 }
 
+#register-a-tag{
+  color: black;
+  font-style: bold;
+}
+
+#register-a-tag:hover{
+  text-decoration: none;
+  color: #F9CD66;
+}
+
+#register-form-page{
+  text-align: center;
+  margin: 20px 30%;
+}
+
 .footer{
   position: fixed;
   bottom: 0;

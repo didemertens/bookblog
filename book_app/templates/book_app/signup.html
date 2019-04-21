@@ -1,12 +1,16 @@
 {% extends "book_app/base.html" %}
 
+{% load crispy_forms_tags %}
+
 {% block body_block %}
 
-<h2 id="register-title">Sign up</h2>
-<form id="register-form" action="" method='post'>
-  {% csrf_token %}
-  {{ form.as_p }}
-  <input type="submit" class='btn btn-secondary' value="Register" />
-</form>
+<div id="register-form-page">
+  <h2 id="register-title">Sign up</h2>
+  <form id="register-form" action="" method='post'>
+    {% csrf_token %}
+    {{ form|crispy }}
+    <input type="submit" class='btn btn-secondary' value="REGISTER" />
+  </form>
+</div>
 
 {% endblock %}

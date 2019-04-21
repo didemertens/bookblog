@@ -1,9 +1,9 @@
 {% extends "book_app/base.html" %}
+
 {% block body_block %}
 
-
 <div id=border-login>
-  <h2 class="login-form">Please Login </h2>
+  <h2 class="login-form">Please log in </h2>
   {% if form.errors %}
     <p>Your username and password didn't match. Please try again!</p>
   {% endif %}
@@ -12,11 +12,12 @@
     {% csrf_token %}
     {{ form.as_p }}
 
-    <input type="submit" class='btn btn-secondary' value="Login" />
+    <input type="submit" class='btn btn-secondary' value="LOGIN" />
     <input type="hidden" name="next" value="{{ next }}" />
   </form>
   <hr>
-  <h3 class="login-form">Or sign up <a href="{% url 'signup' %}">here</a>!</h3>
+  <h3 class="login-form">Or <a id="register-a-tag"
+      href="{% url 'signup' %}">sign up here</a>!</h3>
 </div>
 
 {% endblock %}
