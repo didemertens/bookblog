@@ -330,6 +330,25 @@ label{
   margin: 20px 30%;
 }
 
+.form-text{
+  font-size: 14px;
+}
+
+.form-group li{
+  list-style: none;
+  text-align: left;
+}
+
+.form-group ul li:before{
+  content:"•";
+  font-size:10pt;
+  padding: 5px;
+}
+
+.textinput{
+  font-size:15px;
+}
+
 .footer{
   position: fixed;
   bottom: 0;
