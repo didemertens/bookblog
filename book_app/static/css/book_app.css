@@ -107,6 +107,11 @@ h4, h5{
   font-family: 'Roboto Mono', monospace;
 }
 
+#blog-detail-intro{
+  font-style: italic;
+  margin: 30px 50px;
+}
+
 .grey{
   color: #9ea2a8;
   padding: 20px 5px;
