@@ -9,10 +9,12 @@
   {% endif %}
 </div>
 
-<hr>
 <p id="blog-detail-posted">Posted: {{ blog.posted }}</p>
-<p id="blog-detail-intro">{{ blog.intro }}</p>
-<p id="blog-detail-body">{{ blog.body|safe|linebreaksbr }}</p>
+<hr>
+<div class="blog-entire-body">
+  <p id="blog-detail-intro">{{ blog.intro }}</p>
+  <p id="blog-detail-body">{{ blog.body|safe|linebreaksbr }}</p>
+</div>
 
 <hr>
 
