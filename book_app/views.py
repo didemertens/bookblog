@@ -12,6 +12,11 @@ from book_app.models import Blog,Comment
 from .forms import PostForm, CommentForm
 
 # Create your views here.
+
+def about_page(request):
+  return render(request, 'book_app/about_me.html')
+
+
 class IndexView(TemplateView):
   template_name = 'book_app/index.html'
 
