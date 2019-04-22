@@ -54,11 +54,16 @@ class PostDeleteView(LoginRequiredMixin,UserPassesTestMixin,DeleteView):
     return obj.author == self.request.user
 
 
-@staff_member_required
+@login_required
 def comment_remove(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
     blog_pk = comment.blog.pk
-    comment.delete()
+    if comment.author == request.user:
+      comment.delete()
+    elif request.user.is_superuser:
+      comment.delete()
+    else:
+      return HttpResponseForbidden()
     return redirect('book_app:blog_detail', pk=blog_pk)
 
 @login_required

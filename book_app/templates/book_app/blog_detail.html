@@ -24,13 +24,15 @@
 {% for comment in blog.comments.all %}
   <div class="comment-part">
     <strong>{{ comment.author }}</strong>
-    {% if user.is_superuser %}
+    {% if comment.author == request.user %}
+      <a href="{% url 'book_app:comment_remove' pk=comment.pk %}"><i id="remove-comment" class=" glyphicon glyphicon-remove grey"></i></a>
+    {% elif request.user.is_superuser %}
       <a href="{% url 'book_app:comment_remove' pk=comment.pk %}"><i id="remove-comment" class=" glyphicon glyphicon-remove grey"></i></a>
     {% endif %}
     <p>{{ comment.text|linebreaks }}</p>
   </div>
 {% empty %}
-  <p>No comments yet</p>
+  <p class="blog-entire-body">No comments yet</p>
 {% endfor %}
 
 {% endblock %}
