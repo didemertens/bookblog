@@ -58,15 +58,15 @@ class CommentListView(LoginRequiredMixin,ListView):
 
 @login_required
 def comment_remove(request, pk):
-    comment = get_object_or_404(Comment, pk=pk)
-    blog_pk = comment.blog.pk
-    if comment.author == request.user:
-      comment.delete()
-    elif request.user.is_superuser:
-      comment.delete()
-    else:
-      return HttpResponseForbidden()
-    return redirect('book_app:blog_detail', pk=blog_pk)
+  comment = get_object_or_404(Comment, pk=pk)
+  blog_pk = comment.blog.pk
+  if comment.author == request.user:
+    comment.delete()
+  elif request.user.is_superuser:
+    comment.delete()
+  else:
+    return HttpResponseForbidden()
+  return redirect('book_app:blog_detail', pk=blog_pk)
 
 @login_required
 def add_comment_to_post(request, pk):
@@ -82,3 +82,5 @@ def add_comment_to_post(request, pk):
   else:
     form = CommentForm()
   return render(request, 'book_app/add_comment_to_post.html', {'form': form})
+
+
