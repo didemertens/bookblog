@@ -53,6 +53,8 @@ class PostDeleteView(LoginRequiredMixin,UserPassesTestMixin,DeleteView):
     obj = self.get_object()
     return obj.author == self.request.user
 
+class CommentListView(LoginRequiredMixin,ListView):
+  model = Comment
 
 @login_required
 def comment_remove(request, pk):

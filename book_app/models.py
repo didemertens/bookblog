@@ -24,6 +24,7 @@ class Comment(models.Model):
   blog = models.ForeignKey('book_app.Blog', related_name='comments',on_delete=models.CASCADE)
   author = models.ForeignKey(
           get_user_model(),
+          related_name='authors_comment',
           on_delete=models.CASCADE,
           )
   text = models.TextField()

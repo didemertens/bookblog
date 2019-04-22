@@ -1,0 +1,29 @@
+{% extends "book_app/base.html" %}
+{% block body_block %}
+
+<h1>My Comments</h1>
+
+<div class="container-comment-list">
+  <ol id="comment-list">
+    {% for comment in comment_list %}
+      {% if comment.author == request.user %}
+        <div class="comment-single">
+          <li><a class="comment-title" href="{% url 'book_app:blog_detail' pk=comment.blog.pk %}">
+              {{ comment.blog.title }}</a></li>
+          <p class="comment-para">My comment:</p>
+          <p><a class='comment-item' href="{% url 'book_app:blog_detail' pk=comment.blog.pk %}">{{ comment.text }}</a></p>
+          <hr id="list-line">
+        </div>
+      {% endif %}
+    {% endfor %}
+    <p>{{ comment_list }}</p>
+    {% if request.user != comment_list %}
+      <p>You haven't posted any comments yet!</p>
+      <a id="comment-list-btn" class="btn btn-outline-secondary"
+          href="{% url 'book_app:blog_list' %}">Go to blog posts</a>
+    {% endif %}
+  </ol>
+</div>
+
+
+{% endblock %}
