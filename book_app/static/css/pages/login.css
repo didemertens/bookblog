@@ -1,0 +1,19 @@
+#border-login{
+  border: 4px solid #f7f8f9;
+  padding: 50px;
+  border-top: hidden;
+}
+
+.login-form{
+  text-align: center;
+}
+
+#register-a-tag{
+  color: black;
+  font-style: bold;
+}
+
+#register-a-tag:hover{
+  text-decoration: none;
+  color: #F9CD66;
+}

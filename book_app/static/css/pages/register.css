@@ -1,0 +1,19 @@
+#register-form-page{
+  text-align: center;
+  margin: 20px 30%;
+}
+
+.form-text{
+  font-size: 14px;
+}
+
+.form-group li{
+  list-style: none;
+  text-align: left;
+}
+
+.form-group ul li:before{
+  content:"•";
+  font-size:10pt;
+  padding: 5px;
+}

@@ -1,0 +1,59 @@
+#blog-detail-title{
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+}
+
+#blog-detail-intro{
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.grey{
+  color: #9ea2a8;
+  padding: 20px 5px;
+}
+
+.grey:hover{
+  color: #F9CD66;
+}
+
+.post-bar{
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#blog-detail-posted{
+  font-size: 14px;
+  margin: 0 6%;
+  font-style: italic;
+}
+
+.blog-entire-body{
+  padding: 20px;
+  margin: 0 4%;
+  line-height: 18pt;
+}
+
+.comment-part{
+  position: relative;
+  margin: 20px auto;
+  padding: 10px;
+  border: 1px #93969b;
+  box-shadow: 2px 2px 3px #9ea2a8;
+  width: 50%;
+}
+
+#comment-blog-button{
+  margin: 10px 42%;
+  width: 200px;
+  text-align: center;
+  padding: 10px;
+}
+
+#remove-comment{
+  position: absolute;
+  top: -10px;
+  right: 10px;
+}

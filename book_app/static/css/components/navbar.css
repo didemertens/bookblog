@@ -1,0 +1,21 @@
+#navbar-item{
+  padding: 15px;
+  font-size: 16px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+#navbar-item:hover{
+  color: #F9CD66;
+}
+
+#navbar-image{
+  margin: 5px 5px 5px 10px;
+  width: 40px;
+  height: 70px;
+  width: 70px;
+}
+
+label{
+  display: block;
+  text-align: center;
+}

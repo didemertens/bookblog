@@ -1,0 +1,15 @@
+.text-comment{
+  font-family: 'Sree Krushnadevaraya', serif;
+  margin: 10px 33%;
+  border: 3px solid #e1e4ea;
+  border-radius: 2px;
+  width: 400px;
+  height: 200px;
+}
+
+#comment-button{
+  margin: 10px 42% 30px;
+  width: 200px;
+  text-align: center;
+  padding: 10px;
+}

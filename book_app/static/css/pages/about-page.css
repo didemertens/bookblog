@@ -1,0 +1,9 @@
+#about-body{
+  margin: 10px 100px;
+}
+
+#about-border{
+  border: 4px solid #f7f8f9;
+  padding: 50px;
+  border-top: hidden;
+}

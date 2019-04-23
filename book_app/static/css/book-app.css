@@ -1,0 +1,28 @@
+@import "pages/about-page.css";
+@import "pages/blog-detail.css";
+@import "pages/blog-list.css";
+@import "pages/comment-form.css";
+@import "pages/comment-list.css";
+@import "pages/home-page.css";
+@import "pages/login.css";
+@import "pages/post-form.css";
+@import "pages/register.css";
+
+@import "components/elements.css";
+@import "components/footer.css";
+@import "components/navbar.css";
+@import "components/button.css";
+
+/*.author-comment{
+  font-family: 'Sree Krushnadevaraya', serif;
+  margin: 10px 42.5%;
+  border: 3px solid #e1e4ea;
+  border-radius: 2px;
+}*/
+
+/*
+
+.textinput{
+  font-size:15px;
+}
+*/

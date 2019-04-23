@@ -1,0 +1,103 @@
+#linkblog {
+  text-align: center;
+  margin: 50px 0px 0px;
+}
+
+#buttonblog {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 17px;
+  text-decoration: none;
+  color: black;
+  border: 1px solid #9ea2a8;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+#buttonblog:hover{
+  color: #F9CD66;
+  border: 1px solid #F9CD66;
+}
+
+/*TYPEWRITER */
+
+.typewriter h1{
+  overflow: hidden;
+  border-right: .10em solid transparent;
+  white-space: nowrap;
+  margin: 25px auto;
+  letter-spacing: .15em;
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .65s step-end 3;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 60% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black }
+}
+
+/*CARDS*/
+
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+  margin: 30px 30px 40px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  box-shadow: 2px 2px 3px #9ea2a8;
+}
+
+.flip-card-front {
+  background-color: white;
+  color: black;
+  padding: 20px;
+}
+
+.flip-card-back {
+  background-color: #F9CD66;
+  color: white;
+  transform: rotateY(180deg);
+  padding: 50px;
+}
+
+.cards{
+  margin: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.card-text{
+  font-size: 17px;
+  line-height: 20pt;
+}
+
+#middle-card{
+  width: 20px;
+}
