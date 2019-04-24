@@ -10,8 +10,7 @@
           <div class="comment-single">
             <li><a class="comment-title" href="{% url 'book_app:blog_detail' pk=comment.blog.pk %}">
                 {{ comment.blog.title }}</a></li>
-            <p class="comment-para">My comment:</p>
-            <p><a class='comment-item' href="{% url 'book_app:blog_detail' pk=comment.blog.pk %}">{{ comment.text }}</a></p>
+            <p><a class='comment-item' href="{% url 'book_app:blog_detail' pk=comment.blog.pk %}"><span id="quote-comment">"</span><span class="comment-hover">{{ comment.text }}</span><span id="quote-comment">"</span></a></p>
             <hr id="list-line">
           </div>
         {% endif %}
