@@ -15,6 +15,10 @@
   width: 70px;
 }
 
+.my-navbar{
+  background-color: #F8F9FA;
+}
+
 label{
   display: block;
   text-align: center;
@@ -35,3 +39,5 @@ label{
 #dropdown-menu{
   margin-right: 30px;
 }
+
+
