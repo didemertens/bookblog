@@ -1,6 +1,6 @@
 #navbar-item{
   padding: 15px;
-  font-size: 16px;
+  font-size: 18px;
   font-family: 'Roboto Mono', monospace;
 }
 
@@ -18,4 +18,20 @@
 label{
   display: block;
   text-align: center;
+}
+
+.dropdown-item{
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+  margin-right: 20px;
+  padding: 10px;
+}
+
+.dropdown-item:hover{
+  color: #F9CD66;
+  background-color: white;
+}
+
+#dropdown-menu{
+  margin-right: 30px;
 }
