@@ -58,11 +58,14 @@
   height: 100%;
   text-align: center;
   transition: transform 0.8s;
+  -webkit-transition: transform 0.8s;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
 }
 
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
 }
 
 .flip-card-front, .flip-card-back {
@@ -70,6 +73,7 @@
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   box-shadow: 2px 2px 3px #9ea2a8;
 }
 
@@ -83,6 +87,7 @@
   background-color: #F9CD66;
   color: white;
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
   padding: 50px;
 }
 
